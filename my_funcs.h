@@ -4,12 +4,12 @@
 # define WORD 30
 
 /*  */
-int gematria(char [WORD], char [TXT]);
+int gematria(char*, char*);
 
 /*  */
-int atbash(char [WORD], char [TXT]);
+int atbash(char*, char*);
 
 /*  */
-int anagram(char [WORD], char [TXT]);
+int anagram(char*, char*);
 
 # endif
