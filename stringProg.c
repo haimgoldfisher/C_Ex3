@@ -6,45 +6,39 @@
 # define TXT 1024
 # define WORD 30
 
+
 int main()
 {
-    char input[WORD+TXT];
-    scanf("%10[0-9a-zA-Z ]", &input); // scan the whole input into this string
-    char *input_ptr = input; // pointer to the first char of the string
-    char input_word[WORD]; // the word
-    char input_text[TXT]; // the text
-    int i;
+    char input_word[WORD], input_text[TXT]; // string for word and text
+    int i; // index
+    char currChar; // for the input loops
     for (i = 0; i < WORD; i++)
     {
-        if (strcmp(input_ptr, "/0")) // end of the first word
+        scanf("%c", &currChar);
+        if (currChar == ' ' || currChar == '\n' || currChar == '\t') // word rule
         {
-            break; // finish to fill the word
+            break;
         }
-        input_word[i] = *input_ptr; // add the curr char to word
-        input_ptr++;
+        input_word[i] = currChar;
     }
-    i = 0;
     for (i = 0; i < TXT; i++)
     {
-        if (strcmp(input_ptr, "~") == 0) // '~' is the end of the text
+        scanf("%c", &currChar);
+        if (currChar == '~') // text rule
         {
-            break; // finish to fill the text
+            break;
         }
-        input_text[i] = *input_ptr; // add the curr char to text
-        input_ptr++;
+        input_text[i] = currChar;
     }
-    
-    puts(input_word);
-    puts(input_text);
-    
-    // char *word_ptr = input_word;
-    // char *txt_ptr = input_text;
-    // printf("Gematria Sequences: ");
-    // gematria(word_ptr, txt_ptr);
-    // printf("Atbash Sequences: ");
-    // atbash(word_ptr, txt_ptr);
-    // printf("Anagram Sequences: ");
-    // anagram(word_ptr, txt_ptr);
+
+     char *word_ptr = input_word;
+     char *txt_ptr = input_text;
+     printf("%s", "Gematria Sequences: ");
+     gematria(word_ptr, txt_ptr);
+     printf("%s", "Atbash Sequences: ");
+     atbash(word_ptr, txt_ptr);
+     printf("%s", "Anagram Sequences: ");
+     anagram(word_ptr, txt_ptr);
 
     return 1;
 }
