@@ -30,15 +30,17 @@ int main()
         }
         input_text[i] = currChar;
     }
-
-     char *word_ptr = input_word;
-     char *txt_ptr = input_text;
-     printf("%s", "Gematria Sequences: ");
-     gematria(word_ptr, txt_ptr);
-     printf("%s", "Atbash Sequences: ");
-     atbash(word_ptr, txt_ptr);
-     printf("%s", "Anagram Sequences: ");
-     anagram(word_ptr, txt_ptr);
+    char *word_ptr = input_word;
+    char *txt_ptr = input_text;
+    printf("%s", "Gematria Sequences: ");
+    gematria(word_ptr, txt_ptr);
+    printf("\n");
+//    printf("%s", "Atbash Sequences: ");
+//    atbash(word_ptr, txt_ptr);
+//    printf("\n");
+//    printf("%s", "Anagram Sequences: ");
+//    anagram(word_ptr, txt_ptr);
+//    printf("\n");
 
     return 1;
 }
