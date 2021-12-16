@@ -21,6 +21,7 @@ int main()
         }
         input_word[i] = currChar;
     }
+    input_word[i] = '\0';
     for (i = 0; i < TXT; i++)
     {
         scanf("%c", &currChar);
@@ -30,14 +31,15 @@ int main()
         }
         input_text[i] = currChar;
     }
+    input_text[i] = '\0';
     char *word_ptr = input_word;
     char *txt_ptr = input_text;
     printf("%s", "Gematria Sequences: ");
     gematria(word_ptr, txt_ptr);
     printf("\n");
-//    printf("%s", "Atbash Sequences: ");
-//    atbash(word_ptr, txt_ptr);
-//    printf("\n");
+    printf("%s", "Atbash Sequences: ");
+    atbash(word_ptr, txt_ptr);
+    printf("\n");
 //    printf("%s", "Anagram Sequences: ");
 //    anagram(word_ptr, txt_ptr);
 //    printf("\n");
