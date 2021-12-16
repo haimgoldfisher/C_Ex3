@@ -1,7 +1,4 @@
 # include <stdio.h>
-# include <string.h>
-# include <stdbool.h>
-# include <stdlib.h>
 # include "my_funcs.h"
 # define TXT 1024
 # define WORD 30
@@ -21,7 +18,7 @@ int main()
         }
         input_word[i] = currChar;
     }
-    input_word[i] = '\0';
+    input_word[i] = '\0'; // end for the string
     for (i = 0; i < TXT; i++)
     {
         scanf("%c", &currChar);
@@ -31,18 +28,17 @@ int main()
         }
         input_text[i] = currChar;
     }
-    input_text[i] = '\0';
-    char *word_ptr = input_word;
-    char *txt_ptr = input_text;
-    printf("%s", "Gematria Sequences: ");
+    input_text[i] = '\0'; // end for the string
+    char *word_ptr = input_word; // pointer for the word
+    char *txt_ptr = input_text; // pointer for the text
+    printf("Gematria Sequences: ");
     gematria(word_ptr, txt_ptr);
     printf("\n");
-    printf("%s", "Atbash Sequences: ");
+    printf("Atbash Sequences: ");
     atbash(word_ptr, txt_ptr);
     printf("\n");
-//    printf("%s", "Anagram Sequences: ");
-//    anagram(word_ptr, txt_ptr);
-//    printf("\n");
-
+    printf("Anagram Sequences: ");
+    anagram(word_ptr, txt_ptr);
+    printf("\n");
     return 1;
 }
