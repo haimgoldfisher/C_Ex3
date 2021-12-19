@@ -40,5 +40,5 @@ int main()
     printf("Anagram Sequences: ");
     anagram(word_ptr, txt_ptr);
     printf("\n");
-    return 1;
+    return 0;
 }

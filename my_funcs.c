@@ -52,7 +52,7 @@ int gematria(char *word, char *text)
             }
         }
     }
-    return 1;
+    return 0;
 }
 
 int gim_char(char ch) // inner func: return the gematria of a single char
@@ -162,7 +162,7 @@ int atbash(char *word, char *text)
             }
         }
     }
-    return 1;
+    return 0;
 }
 
 int len (char *pointer)
@@ -198,7 +198,7 @@ int calc_atbash(char *str_ptr, char *atbash_res)
         i++;
     }
     atbash_res[i] = '\0';
-    return 1;
+    return 0;
 }
 
 // **************************************************
@@ -241,7 +241,7 @@ int anagram(char *word, char *text)
             }
         }
     }
-    return 1;
+    return 0;
 }
 
 int val_char(char ch)
@@ -302,5 +302,5 @@ int sort(char *str, int length)
             }
         }
     }
-    return 1;
+    return 0;
 }
